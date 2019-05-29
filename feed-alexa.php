@@ -1,14 +1,14 @@
 <?php
 /**
- * Template Name: alexa feed
+ * Template Name: alexaRSS alexafeed
  */
+// Feed created by nintobey on GitHub
 $postCount = 5; // The number of posts in the feed
 $titlefeed = "My Alexa Feed"; // The name of the feed
 $posts = query_posts('showposts=' . $postCount);
 header('Content-Type: '.feed_content_type('rss-http').'; charset='.get_option('blog_charset'), true);
 echo '<?xml version="1.0" encoding="UTF-8"?'.'>';
 ?>
-<!–– Feed created by nintobey on GitHub -->
 <rss version="2.0" <?php do_action('rss2_ns'); ?>>
 <channel>
 		<ttl>30</ttl>
